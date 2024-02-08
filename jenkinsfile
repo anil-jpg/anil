@@ -2,21 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('checkout') {
+        stage('Checkout') {
             steps {
-       
+                git branch: 'main', credentialsId: '<CREDS>', url: 'https://github.com/anil-jpg/anil.git'
             }
         }
-        stage('Terraform inin') {
-            step {
-           
+        stage('Terraform init') {
+            steps {
+                sh 'terraform init'
             }
-        } 
+        }
         stage('Terraform apply') {
             steps {
-          
-            }    
+                sh 'terraform apply --auto-approve'
+            }
         }
- 
+        
     }
 }
