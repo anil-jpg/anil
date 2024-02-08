@@ -1,13 +1,22 @@
 pipeline {
+    agent any
 
-    parameters {
-        booleanparam(name: 'autoapprove', defaultvalue: false, description: 'Automatically run apply generating plan')
+    stages {
+        stage('checkout') {
+            steps {
+       
+            }
+        }
+        stage('Terraform inin') {
+            step {
+           
+            }
+        } 
+        stage('Terraform apply') {
+            steps {
+          
+            }    
+        }
+ 
     }
-   environment {
-   AWS_ACCESS_KEY_ID
-   AWS_SECRET_KEY_ID
-   }
-  agent  any
-   stages {
-       stage('checkout') {
-           steps {
+}
