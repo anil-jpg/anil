@@ -3,10 +3,9 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "sairamsai" {
-  bucket = "my-tf-test-bucket"
+  bucket = "saisai-"
 
   tags = {
     Name        = "sairamsai "
-    Environment = "Dev"
   }
 }
