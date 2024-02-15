@@ -2,10 +2,10 @@ provider "aws" {
     region = "us-east-1"
 }
 
-resource "aws_s3_bucket" "sairamsrinath" {
-  bucket = "sairamsrinath"
+resource "aws_s3_bucket" "ramsainath" {
+  bucket = "ramsainath"
 
   tags = {
-    Name        = "samsri"
+    Name        = "jairam"
   }
 }
