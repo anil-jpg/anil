@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "anilkumar" {
-  bucket = "demo"
+  bucket = "anilkumar"
 
   tags = {
     Name        = "laxman"
