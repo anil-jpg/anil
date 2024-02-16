@@ -2,14 +2,12 @@ provider "aws" {
     region = "us-east-1"
 }
 
-resource "aws_db_instance" "default" {
-  allocated_storage    = 400
-  db_name              = "mydatabase"
-  engine               = "MYSQL"
-  engine_version       = "8.0.35"
-  instance_class       = "db.m5d.xlarge"
-  username             = "foo"
-  password             = "foobarbaz"
-  parameter_group_name = "default.mysql5.7"
-  skip_final_snapshot  = true
+resource "aws_security_group" "allow_tls" {
+  name        = "allow_tls"
+  description = "Allow TLS inbound traffic and all outbound traffic"
+  vpc_id      = aws_vpc.main.id
+
+  tags = {
+    Name = "allow_tls"
+  }
 }
