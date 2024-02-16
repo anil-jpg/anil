@@ -2,12 +2,12 @@ provider "aws" {
     region = "us-east-1"
 }
 
-resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
+resource "aws_security_group" "sairam" {
+  name        = "sairam"
   description = "Allow TLS inbound traffic and all outbound traffic"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = "vpc-04d475421beab95ed"
 
   tags = {
-    Name = "allow_tls"
+    Name = "ramsai"
   }
 }
